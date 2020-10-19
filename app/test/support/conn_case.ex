@@ -1,4 +1,4 @@
-defmodule DevopsMeetupWeb.ConnCase do
+defmodule DevopsFitnessWeb.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -11,7 +11,7 @@ defmodule DevopsMeetupWeb.ConnCase do
   we enable the SQL sandbox, so changes done to the database
   are reverted at the end of every test. If you are using
   PostgreSQL, you can even run database tests asynchronously
-  by setting `use DevopsMeetupWeb.ConnCase, async: true`, although
+  by setting `use DevopsFitnessWeb.ConnCase, async: true`, although
   this option is not recommended for other databases.
   """
 
@@ -22,20 +22,20 @@ defmodule DevopsMeetupWeb.ConnCase do
       # Import conveniences for testing with connections
       import Plug.Conn
       import Phoenix.ConnTest
-      import DevopsMeetupWeb.ConnCase
+      import DevopsFitnessWeb.ConnCase
 
-      alias DevopsMeetupWeb.Router.Helpers, as: Routes
+      alias DevopsFitnessWeb.Router.Helpers, as: Routes
 
       # The default endpoint for testing
-      @endpoint DevopsMeetupWeb.Endpoint
+      @endpoint DevopsFitnessWeb.Endpoint
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(DevopsMeetup.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(DevopsFitness.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(DevopsMeetup.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(DevopsFitness.Repo, {:shared, self()})
     end
 
     {:ok, conn: Phoenix.ConnTest.build_conn()}

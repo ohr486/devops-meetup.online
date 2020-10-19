@@ -1,4 +1,4 @@
-# DevopsMeetup
+# DevopsFitness
 
 To start your Phoenix server:
 

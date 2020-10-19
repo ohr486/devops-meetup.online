@@ -1,4 +1,4 @@
-defmodule DevopsMeetup.Application do
+defmodule DevopsFitness.Application do
   # See https://hexdocs.pm/elixir/Application.html
   # for more information on OTP Applications
   @moduledoc false
@@ -8,27 +8,27 @@ defmodule DevopsMeetup.Application do
   def start(_type, _args) do
     children = [
       # Start the Ecto repository
-      DevopsMeetup.Repo,
+      DevopsFitness.Repo,
       # Start the Telemetry supervisor
-      DevopsMeetupWeb.Telemetry,
+      DevopsFitnessWeb.Telemetry,
       # Start the PubSub system
-      {Phoenix.PubSub, name: DevopsMeetup.PubSub},
+      {Phoenix.PubSub, name: DevopsFitness.PubSub},
       # Start the Endpoint (http/https)
-      DevopsMeetupWeb.Endpoint
-      # Start a worker by calling: DevopsMeetup.Worker.start_link(arg)
-      # {DevopsMeetup.Worker, arg}
+      DevopsFitnessWeb.Endpoint
+      # Start a worker by calling: DevopsFitness.Worker.start_link(arg)
+      # {DevopsFitness.Worker, arg}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: DevopsMeetup.Supervisor]
+    opts = [strategy: :one_for_one, name: DevopsFitness.Supervisor]
     Supervisor.start_link(children, opts)
   end
 
   # Tell Phoenix to update the endpoint configuration
   # whenever the application is updated.
   def config_change(changed, _new, removed) do
-    DevopsMeetupWeb.Endpoint.config_change(changed, removed)
+    DevopsFitnessWeb.Endpoint.config_change(changed, removed)
     :ok
   end
 end

@@ -1,16 +1,16 @@
-defmodule DevopsMeetupWeb.Endpoint do
-  use Phoenix.Endpoint, otp_app: :devops_meetup
+defmodule DevopsFitnessWeb.Endpoint do
+  use Phoenix.Endpoint, otp_app: :devops_fitness
 
   # The session will be stored in the cookie and signed,
   # this means its contents can be read but not tampered with.
   # Set :encryption_salt if you would also like to encrypt it.
   @session_options [
     store: :cookie,
-    key: "_devops_meetup_key",
-    signing_salt: "LLzJ6HsN"
+    key: "_devops_fitness_key",
+    signing_salt: "QVmyA7JV"
   ]
 
-  socket "/socket", DevopsMeetupWeb.UserSocket,
+  socket "/socket", DevopsFitnessWeb.UserSocket,
     websocket: true,
     longpoll: false
 
@@ -22,7 +22,7 @@ defmodule DevopsMeetupWeb.Endpoint do
   # when deploying your static files in production.
   plug Plug.Static,
     at: "/",
-    from: :devops_meetup,
+    from: :devops_fitness,
     gzip: false,
     only: ~w(css fonts images js favicon.ico robots.txt)
 
@@ -32,7 +32,7 @@ defmodule DevopsMeetupWeb.Endpoint do
     socket "/phoenix/live_reload/socket", Phoenix.LiveReloader.Socket
     plug Phoenix.LiveReloader
     plug Phoenix.CodeReloader
-    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :devops_meetup
+    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :devops_fitness
   end
 
   plug Phoenix.LiveDashboard.RequestLogger,
@@ -50,5 +50,5 @@ defmodule DevopsMeetupWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
-  plug DevopsMeetupWeb.Router
+  plug DevopsFitnessWeb.Router
 end

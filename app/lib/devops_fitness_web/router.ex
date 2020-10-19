@@ -1,5 +1,5 @@
-defmodule DevopsMeetupWeb.Router do
-  use DevopsMeetupWeb, :router
+defmodule DevopsFitnessWeb.Router do
+  use DevopsFitnessWeb, :router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -13,14 +13,14 @@ defmodule DevopsMeetupWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", DevopsMeetupWeb do
+  scope "/", DevopsFitnessWeb do
     pipe_through :browser
 
     get "/", PageController, :index
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", DevopsMeetupWeb do
+  # scope "/api", DevopsFitnessWeb do
   #   pipe_through :api
   # end
 
@@ -36,7 +36,7 @@ defmodule DevopsMeetupWeb.Router do
 
     scope "/" do
       pipe_through :browser
-      live_dashboard "/dashboard", metrics: DevopsMeetupWeb.Telemetry
+      live_dashboard "/dashboard", metrics: DevopsFitnessWeb.Telemetry
     end
   end
 end

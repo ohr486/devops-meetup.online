@@ -1,5 +1,5 @@
-defmodule DevopsMeetupWeb.PageControllerTest do
-  use DevopsMeetupWeb.ConnCase
+defmodule DevopsFitnessWeb.PageControllerTest do
+  use DevopsFitnessWeb.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get(conn, "/")

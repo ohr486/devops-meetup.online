@@ -1,12 +1,12 @@
-defmodule DevopsMeetupWeb do
+defmodule DevopsFitnessWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, views, channels and so on.
 
   This can be used in your application as:
 
-      use DevopsMeetupWeb, :controller
-      use DevopsMeetupWeb, :view
+      use DevopsFitnessWeb, :controller
+      use DevopsFitnessWeb, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -19,19 +19,19 @@ defmodule DevopsMeetupWeb do
 
   def controller do
     quote do
-      use Phoenix.Controller, namespace: DevopsMeetupWeb
+      use Phoenix.Controller, namespace: DevopsFitnessWeb
 
       import Plug.Conn
-      import DevopsMeetupWeb.Gettext
-      alias DevopsMeetupWeb.Router.Helpers, as: Routes
+      import DevopsFitnessWeb.Gettext
+      alias DevopsFitnessWeb.Router.Helpers, as: Routes
     end
   end
 
   def view do
     quote do
       use Phoenix.View,
-        root: "lib/devops_meetup_web/templates",
-        namespace: DevopsMeetupWeb
+        root: "lib/devops_fitness_web/templates",
+        namespace: DevopsFitnessWeb
 
       # Import convenience functions from controllers
       import Phoenix.Controller,
@@ -54,7 +54,7 @@ defmodule DevopsMeetupWeb do
   def channel do
     quote do
       use Phoenix.Channel
-      import DevopsMeetupWeb.Gettext
+      import DevopsFitnessWeb.Gettext
     end
   end
 
@@ -66,9 +66,9 @@ defmodule DevopsMeetupWeb do
       # Import basic rendering functionality (render, render_layout, etc)
       import Phoenix.View
 
-      import DevopsMeetupWeb.ErrorHelpers
-      import DevopsMeetupWeb.Gettext
-      alias DevopsMeetupWeb.Router.Helpers, as: Routes
+      import DevopsFitnessWeb.ErrorHelpers
+      import DevopsFitnessWeb.Gettext
+      alias DevopsFitnessWeb.Router.Helpers, as: Routes
     end
   end
 

@@ -1,4 +1,4 @@
-defmodule DevopsMeetupWeb.Telemetry do
+defmodule DevopsFitnessWeb.Telemetry do
   use Supervisor
   import Telemetry.Metrics
 
@@ -31,11 +31,11 @@ defmodule DevopsMeetupWeb.Telemetry do
       ),
 
       # Database Metrics
-      summary("devops_meetup.repo.query.total_time", unit: {:native, :millisecond}),
-      summary("devops_meetup.repo.query.decode_time", unit: {:native, :millisecond}),
-      summary("devops_meetup.repo.query.query_time", unit: {:native, :millisecond}),
-      summary("devops_meetup.repo.query.queue_time", unit: {:native, :millisecond}),
-      summary("devops_meetup.repo.query.idle_time", unit: {:native, :millisecond}),
+      summary("devops_fitness.repo.query.total_time", unit: {:native, :millisecond}),
+      summary("devops_fitness.repo.query.decode_time", unit: {:native, :millisecond}),
+      summary("devops_fitness.repo.query.query_time", unit: {:native, :millisecond}),
+      summary("devops_fitness.repo.query.queue_time", unit: {:native, :millisecond}),
+      summary("devops_fitness.repo.query.idle_time", unit: {:native, :millisecond}),
 
       # VM Metrics
       summary("vm.memory.total", unit: {:byte, :kilobyte}),
@@ -49,7 +49,7 @@ defmodule DevopsMeetupWeb.Telemetry do
     [
       # A module, function and arguments to be invoked periodically.
       # This function must call :telemetry.execute/3 and a metric must be added above.
-      # {DevopsMeetupWeb, :count_users, []}
+      # {DevopsFitnessWeb, :count_users, []}
     ]
   end
 end

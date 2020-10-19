@@ -7,16 +7,16 @@
 # General application configuration
 use Mix.Config
 
-config :devops_meetup,
-  ecto_repos: [DevopsMeetup.Repo]
+config :devops_fitness,
+  ecto_repos: [DevopsFitness.Repo]
 
 # Configures the endpoint
-config :devops_meetup, DevopsMeetupWeb.Endpoint,
+config :devops_fitness, DevopsFitnessWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "MEjhedd8tS2r2vfD7sww2/3pMNTKE53KbNN+o86SFTKc5qkSvCPLGwsjXaBuXRaz",
-  render_errors: [view: DevopsMeetupWeb.ErrorView, accepts: ~w(html json), layout: false],
-  pubsub_server: DevopsMeetup.PubSub,
-  live_view: [signing_salt: "3vioXAu+"]
+  secret_key_base: "Z/j+LTbTDAdvAo3TO3VFFXYxlt+baoyydBzn4Q55+E9CWHyJ5HPfUFPoy+6y27k9",
+  render_errors: [view: DevopsFitnessWeb.ErrorView, accepts: ~w(html json), layout: false],
+  pubsub_server: DevopsFitness.PubSub,
+  live_view: [signing_salt: "9lByDC/q"]
 
 # Configures Elixir's Logger
 config :logger, :console,

@@ -1,6 +1,6 @@
-defmodule DevopsMeetup do
+defmodule DevopsFitness do
   @moduledoc """
-  DevopsMeetup keeps the contexts that define your domain
+  DevopsFitness keeps the contexts that define your domain
   and business logic.
 
   Contexts are also responsible for managing your data, regardless
