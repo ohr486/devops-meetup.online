@@ -10,3 +10,7 @@ erl_crash.dump
 .elixir_ls/
 
 aws/credentials
+
+# for editor
+*~
+*.swp
