@@ -14,3 +14,6 @@ aws/credentials
 # for editor
 *~
 *.swp
+
+# for mac
+.DS_Store
